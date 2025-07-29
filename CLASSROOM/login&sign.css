@@ -1,0 +1,21 @@
+.main-container {
+
+    width: 500px;
+    background-color: rgb(255, 253, 253);
+    border-color: rgb(243, 243, 246);
+    height: 500px;
+    display: grid;
+}
+body{
+    background-color: black;
+    align-items: center;
+}
+.first-row 
+.second-row{
+    background-color: #ffd106;
+    width: 100%;
+}
+.third-row{
+    background-color: #fa0808;
+    width: 100%;
+}

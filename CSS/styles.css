@@ -1,0 +1,30 @@
+.styled-table thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr:first {
+    background-color: goldenrod;
+}
+
+.styled-table tbody tr:nth-child(1) {
+    background-color: rgb(255, 219, 12);
+}
+h1{
+    color: goldenrod;
+}
+h3{
+    color: goldenrod;
+}
+tr{
+    background-color: rgba(131, 222, 195, 0.861);
+    color: rgb(16, 15, 15);
+}
+th{
+    background-color: rgb(255, 227, 65);
+}

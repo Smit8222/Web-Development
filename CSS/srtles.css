@@ -1,0 +1,18 @@
+.inp1 {
+    background: rgb(245, 244, 246);
+    color: rgb(246, 8, 8);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px paleturquoise,-10px -10px 20px floralwhite;
+}
+.inp2 {
+    background: rgb(253, 253, 253);
+    color: rgb(247, 7, 7);
+}
+.inp-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    padding: 30px;width: 300px;
+    text-align: center;
+}
