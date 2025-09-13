@@ -1,3 +1,70 @@
+body {
+    background: #f0f4f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #22223b;
+}
+
+form {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    padding: 32px 40px;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+h1 {
+    color: #3a86ff;
+    margin-bottom: 24px;
+}
+
+input[type="text"] {
+    background: #e0e7ef;
+    color: #22223b;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    width: 100%;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+    border: 1.5px solid #3a86ff;
+    outline: none;
+}
+
+select {
+    background: #e0e7ef;
+    color: #22223b;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+button {
+    background: #3a86ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #265d97;
+}
+
+label, select, input[type="checkbox"] {
+    font-size: 1rem;
+}
+
 .inp1 {
     background: rgb(245, 244, 246);
     color: rgb(246, 8, 8);

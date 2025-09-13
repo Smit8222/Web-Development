@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(270deg, #1d2b64, #f8cdda, #1fa2ff, #f8cdda, #1d2b64);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 20px 0 rgba(31,162,255,0.2);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+      color: #fff;
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #1fa2ff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffcc00, 0 0 20px #1fa2ff; }
+      to { text-shadow: 0 0 30px #ffcc00, 0 0 60px #1fa2ff; }
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, text-shadow 0.3s;
+      text-shadow: 0 0 5px #1fa2ff;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+      text-shadow: 0 0 15px #ffcc00, 0 0 10px #1fa2ff;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2.2rem;
+      color: #ffcc00;
+      text-shadow: 2px 2px 20px #1fa2ff, 0 0 10px #000;
+      animation: colorchange 6s linear infinite alternate;
+    }
+
+    @keyframes colorchange {
+      0% { color: #ffcc00; }
+      50% { color: #1fa2ff; }
+      100% { color: #ffcc00; }
+    }
+
+    .about .details {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(31,162,255,0.2);
+      animation: fadeIn 2s;
+    }
+
+    .about p {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      color: #fff;
+      text-shadow: 0 0 6px #1fa2ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      animation: fadeIn 2s 0.5s backwards;
+    }
+
+    .skills ul li {
+      background: linear-gradient(90deg, #ffcc00, #1fa2ff);
+      color: black;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 10px #1fa2ff44;
+      cursor: pointer;
+    }
+
+    .skills ul li:hover {
+      transform: scale(1.15) rotate(-2deg);
+      box-shadow: 0 4px 30px #ffcc00cc, 0 0 20px #1fa2ff99;
+      background: linear-gradient(90deg, #1fa2ff, #ffcc00);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      animation: fadeIn 2s 1s backwards;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.13);
+      padding: 24px 18px;
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.5s, background 0.5s, box-shadow 0.5s;
+      box-shadow: 0 4px 24px rgba(31,162,255,0.15);
+      border: 1.5px solid #ffcc00;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      text-shadow: 0 0 8px #1fa2ff;
+    }
+
+    .card:hover {
+      transform: translateY(-14px) scale(1.04) rotate(-1deg);
+      background: rgba(255, 204, 0, 0.95);
+      color: #222;
+      box-shadow: 0 8px 40px #1fa2ff99, 0 0 40px #ffcc00cc;
+      border-color: #1fa2ff;
+    }
+
+    .card:hover h3 {
+      color: #1fa2ff;
+      text-shadow: 0 0 16px #ffcc00;
+    }
+
+    .contact {
+      text-align: center;
+      animation: fadeIn 2s 1.5s backwards;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      color: #fff;
+      text-shadow: 0 0 8px #1fa2ff;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #ffcc00;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #1fa2ff;
+      border-top: 2px solid #1fa2ff;
+      animation: fadeIn 2s 2s backwards;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm Smit Hira Khobragade</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="details">
+      <p>👨‍🎓 I am a Computer Engineering student.</p>
+      <p>🏫 Studying at <b>[Sinhgad Institute Of Technology And Science (SITS)]</b>.</p>
+      <p>📍 I live in <b>Boegaon, Taluka Kelapur, District Yavatmal</b>.</p>
+      <p>🎯 My 10th class marks: <b>74%</b> from <b>Vikas Hinde School</b>.</p>
+      <p>🎯 My 12th class marks: <b>72%</b>.</p>
+      <p>👨‍👩‍👧 Family: My father is a farmer, my mother is a homemaker, and my sister is a NEET aspirant.</p>
+      <p>✨ I am passionate about learning, coding, and creating meaningful projects.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>React</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>A personal website showcasing my skills and projects.</p>
+    </div>
+    <div class="card">
+      <h3>Todo App</h3>
+      <p>A simple task manager built with HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="card">
+      <h3>Calculator</h3>
+      <p>A clean, responsive calculator app with JavaScript logic.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: smitkhobragade664@gmail.com</p>
+    <p>Phone: +91 9309328919</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Smit Hira Khobragade. All rights reserved.</p>
+  </footer>
+</body>
+</html>

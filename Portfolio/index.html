@@ -5,6 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIRA KHOBRAGADE</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            color: #222;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            animation: bgFade 2s ease;
+        }
+
+        @keyframes bgFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #2d3a4b;
+            text-shadow: 0 2px 8px #b3c6e0;
+            animation: slideDown 1s cubic-bezier(.68, -0.55, .27, 1.55);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        div {
+            background: linear-gradient(120deg, #ffffff 60%, #e3f0ff 100%);
+            max-width: 600px;
+            margin: 30px auto 0 auto;
+            padding: 24px 32px;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
+            border: 1.5px solid #e3e3e3;
+            animation: fadeInUp 1s ease;
+            transition: box-shadow 0.3s;
+        }
+
+        div:hover {
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #b3d1ff;
+            padding-bottom: 4px;
+            letter-spacing: 1px;
+            animation: fadeIn 1.2s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        ul {
+            list-style: disc inside;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.08rem;
+            transition: color 0.2s, transform 0.2s;
+            position: relative;
+        }
+
+        li:hover {
+            color: #1a73e8;
+            transform: translateX(8px) scale(1.03);
+        }
+
+        b,
+        B {
+            color: #e67e22;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px #ffe5c3;
+        }
+
+        /* Section backgrounds for color variety */
+        #div1 {
+            background: linear-gradient(120deg, #fffbe7 60%, #e3f0ff 100%);
+        }
+
+        #div2 {
+            background: linear-gradient(120deg, #e7fff9 60%, #e3f0ff 100%);
+        }
+
+        #div3 {
+            background: linear-gradient(120deg, #ffe7f3 60%, #e3f0ff 100%);
+        }
+
+        #div4 {
+            background: linear-gradient(120deg, #e7f0ff 60%, #e3f0ff 100%);
+        }
+
+        #div5 {
+            background: linear-gradient(120deg, #f7e7ff 60%, #e3f0ff 100%);
+        }
+
+        @media (max-width: 700px) {
+            div {
+                max-width: 95vw;
+                padding: 16px 8px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
